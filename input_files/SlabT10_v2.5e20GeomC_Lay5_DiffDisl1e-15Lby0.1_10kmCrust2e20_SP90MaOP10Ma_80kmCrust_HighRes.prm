@@ -1,11 +1,11 @@
-set Additional shared libraries = /home/axh1305/aspect_work/plugins/recent_wEclogite/libvisco_plastic_mod.so
+set Additional shared libraries = **plugin location**/libvisco_plastic_mod.so
 
 set Resume computation                     = true
 
 set Dimension                              = 2
 set Use years in output instead of seconds = true
 set End time                               = 60e6
-set Output directory                       = /home/axh1305/aspect_work/outputs/SlabT10_v2.5e20GeomC_Lay5_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_HighRes
+set Output directory                       = **output location**/SlabT10_v2.5e20GeomC_Lay5_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_HighRes
 
 ### SOLVER STUFF
 # non-linear stuff
@@ -63,7 +63,7 @@ subsection Initial temperature model
   set Model name = ascii data
    
    subsection Ascii data model
-     set Data directory = /home/axh1305/aspect_work/inputs/grids/ 
+     set Data directory = **input geometry location** 
      set Data file name = tempSPandOP_halfspace90Ma10MaNEW_rad250km_SlabT_NoNotch.txt
    end
 end
@@ -75,7 +75,7 @@ end
 subsection Initial composition model
   set Model name = ascii data
    subsection Ascii data model
-     set Data directory = /home/axh1305/aspect_work/inputs/grids/
+     set Data directory = **input geometry location**
      set Data file name = compnotch_thick10km_80km50kmContOP_NoNotch_WeakPlateEdges_90MaThinSlabCore2.txt 
    end
 end
