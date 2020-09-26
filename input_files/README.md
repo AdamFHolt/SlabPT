@@ -1,13 +1,13 @@
 ## Model overiew:
 
-**Reference model** (Figures 1-3):
+**Reference model** (Figures 1-3)<br />
 SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_HighRes.prm
 
-**Variable crustal viscosity** (Figure 4)
+**Variable crustal viscosity** (Figure 4)<br />
 SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust1e20_SP90MaOP10Ma_80kmCrust_HighRes.prm # weaker crust
 SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust4e20_SP90MaOP10Ma_80kmCrust_HighRes.prm # stronger crust
 
-**Variable slab viscosity** (Figure 4)
+**Variable slab viscosity** (Figure 4)<br />
 SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_WeakSlab_HighRes.prm   # weaker slab
 SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_StrongSlab_HighRes.prm # stronger slab
 
