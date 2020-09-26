@@ -1,6 +1,6 @@
-Contains the suite of thermo-mechanical subduction models analyzed in Holt and Condit (submitted to EPSL). All models were ran using ASPECT version 2.1.0 with the addition of a rheology plugin (contained here). 
+## OVERVIEW 
 
-To summarize the folder contents:
+Contains the suite of thermo-mechanical subduction models analyzed in Holt and Condit (submitted to EPSL). All models were ran using ASPECT version 2.1.0 with the addition of a rheology plugin (contained here). To summarize the folder contents:
 
 **input_files:**  Contains all ASPECT input (.prm) files used in the study. Inside this directory is another README summarizing the models. 
 
@@ -8,7 +8,8 @@ To summarize the folder contents:
 
 **plugin:** Contains the source code of the rheology plugin: visco_plastic_mod. This is a modified version of the original visco_plastic rheology module. Main modifications include: a simplified diffusion/dislocation creep flow law (with options to switch one component off in the lower mantle), an additional plasticity formulation (Byerlee-type yielding), and options to cut off the crustal viscosity/density component at a specified depth (or taper out between two depths). 
 
---
+## REFERENCES
+
 **Model reference:**
 
 Adam Holt and Cailey Condit, "Slab temperature evolution over the lifetime of a subduction zone", Submitted to Earth, Planet, Sci. Lett.
