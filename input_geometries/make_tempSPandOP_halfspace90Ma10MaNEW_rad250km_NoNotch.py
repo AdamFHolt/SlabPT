@@ -1,5 +1,4 @@
 #!/usr/bin/env python 
-#cp'd from make_tempSPandOP_halfspace80Ma25Ma_rad200km_BigBox_SmallerOP.py
 
 import sys
 import numpy as np
