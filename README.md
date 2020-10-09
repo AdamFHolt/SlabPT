@@ -6,7 +6,7 @@ Contains the suite of thermo-mechanical subduction models analyzed in Holt and C
 
 **input_geometries:** Contains Python scripts used to create the initial conditions of the models as .txt files. Two scripts to create i) the initial temperature distribution, and ii) the initial compositional distribution. All models use the same pair of input geometry files. 
 
-**plugin:** Contains the source code of the rheology plugin: visco_plastic_mod. This is a modified version of the original visco_plastic rheology module. Main modifications include: a simplified diffusion/dislocation creep flow law (with options to switch one component off in the lower mantle), an additional plasticity formulation (Byerlee-type yielding), and options to cut off the crustal viscosity/density component at a specified depth (or taper out between two depths). 
+**plugin:** Contains the source code of the rheology plugin: visco_plastic_mod. This is a modified version of the original visco_plastic rheology module. Main modifications: a simplified diffusion/dislocation creep flow law (with options to switch one component off in the lower mantle), an additional plasticity formulation (Byerlee-type yielding), options to cut off the crustal viscosity/density component at a specified depth (or taper out between two depths). 
 
 ## REFERENCES
 
