@@ -10,7 +10,7 @@ Contains the suite of thermo-mechanical subduction models analyzed in Holt and C
 
 ## REFERENCES
 
-**Model reference:**
+**Main study reference:**
 
 Adam F. Holt and Cailey B. Condit, "Slab temperature evolution over the lifetime of a subduction zone", Submitted to Geochemistry, Geophysics, Geosystems.
 
