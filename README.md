@@ -1,6 +1,6 @@
 ## OVERVIEW 
 
-Contains the suite of thermo-mechanical subduction models analyzed in Holt and Condit (submitted to EPSL). All models were ran using ASPECT version 2.1.0 with the addition of a rheology plugin (contained here). To summarize the folder contents:
+Contains the suite of thermo-mechanical subduction models analyzed in Holt and Condit (submitted to G-cubed). All models were ran using ASPECT version 2.1.0 with the addition of a rheology plugin (contained here). To summarize the folder contents:
 
 **input_files:**  Contains all ASPECT input (.prm) files used in the study. Inside this directory is another README summarizing the models. 
 
@@ -12,7 +12,7 @@ Contains the suite of thermo-mechanical subduction models analyzed in Holt and C
 
 **Model reference:**
 
-Adam Holt and Cailey Condit, "Slab temperature evolution over the lifetime of a subduction zone", Submitted to Earth, Planet, Sci. Lett.
+Adam F. Holt and Cailey B. Condit, "Slab temperature evolution over the lifetime of a subduction zone", Submitted to Geochemistry, Geophysics, Geosystems.
 
 **ASPECT references:**
 
