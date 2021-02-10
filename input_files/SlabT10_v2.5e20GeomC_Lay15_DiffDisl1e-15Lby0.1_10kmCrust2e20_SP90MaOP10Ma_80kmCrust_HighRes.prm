@@ -5,7 +5,7 @@ set Resume computation                     = true
 set Dimension                              = 2
 set Use years in output instead of seconds = true
 set End time                               = 150e6
-set Output directory                       = **output location**/SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_HighRes
+set Output directory                       = outputs/SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_HighRes
 
 ### SOLVER STUFF
 # non-linear stuff

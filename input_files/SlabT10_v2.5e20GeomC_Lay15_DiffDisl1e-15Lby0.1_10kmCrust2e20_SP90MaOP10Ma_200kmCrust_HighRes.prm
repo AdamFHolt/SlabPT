@@ -1,9 +1,11 @@
-set Additional shared libraries = /work/04714/adamholt/stampede2/aspect_work/my_modules/recent_wEclogite/libvisco_plastic_mod.so
+set Additional shared libraries = /home/axh1305/aspect_work/plugins/recent_wEclogite/libvisco_plastic_mod.so
+
+set Resume computation                     = true
 
 set Dimension                              = 2
 set Use years in output instead of seconds = true
 set End time                               = 150e6
-set Output directory                       = outputs/SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_HighRes
+set Output directory                       = /home/axh1305/aspect_work/outputs/SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_200kmCrust_HighRes
 
 ### SOLVER STUFF
 # non-linear stuff
@@ -61,7 +63,7 @@ subsection Initial temperature model
   set Model name = ascii data
    
    subsection Ascii data model
-     set Data directory = /work/04714/adamholt/stampede2/aspect_work/text_file_inputs/SlabT/new/
+     set Data directory = /home/axh1305/aspect_work/inputs/grids/ 
      set Data file name = tempSPandOP_halfspace90Ma10MaNEW_rad250km_SlabT_NoNotch.txt
    end
 end
@@ -73,7 +75,7 @@ end
 subsection Initial composition model
   set Model name = ascii data
    subsection Ascii data model
-     set Data directory = /work/04714/adamholt/stampede2/aspect_work/text_file_inputs/SlabT/new/ 
+     set Data directory = /home/axh1305/aspect_work/inputs/grids/
      set Data file name = compnotch_thick10km_80km50kmContOP_NoNotch_WeakPlateEdges_90MaThinSlabCore2.txt 
    end
 end
@@ -151,10 +153,9 @@ subsection Material model
 
     # crust cutoff
     set Crust cutoff = true
-    set Crust taper  = true
+    set Crust taper  = false
     set Two crusts   = false
-    set Crust cutoff depth = 125.e3
-    set Lower crust cutoff depth = 225.e3
+    set Crust cutoff depth = 200.e3
     set Crust index = 1
     set Crust eclogite = false
     set Viscosity averaging scheme = geometric

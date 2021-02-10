@@ -6,8 +6,8 @@ import numpy, scipy, scipy.special
 xmin=0;xmax=11600.e3;
 ymin=0;ymax=2900.e3;
 # number of cells, (i.e. "number of repetitions" in ASPECT input)
-xnum=5800
-ynum=1450
+xnum=int(5800/2)
+ynum=int(1450/2)
 
 x_gap = 1550.e3; 
 x_SP  = 6000.e3; 
@@ -46,53 +46,53 @@ depth_T = 2*numpy.sqrt(k*age)*scipy.special.erfcinv((Tmax-850.)/(Tmax-Tmin))
 #print depth_T/1.e3
 
 for j in range(ynum + 1): 
-	for i in range(xnum + 1):
+    for i in range(xnum + 1):
 
-		x = xmin + i * ((xmax - xmin)/xnum)
-		y = yvals[j]
+        x = xmin + i * ((xmax - xmin)/xnum)
+        y = yvals[j]
 
-		C[ind,0] = x
-		C[ind,1] = y
+        C[ind,0] = x
+        C[ind,1] = y
 
-		# crust tracers
-		if x > (x_gap) and x <= (x_gap + x_SP - radius_outer) and y > (ymax - y_crust):
-			C[ind,2]=1
- 		elif x > (x_gap + x_SP - radius_outer) and x < (x_gap + x_SP):
-			x1 = x_gap + x_SP - radius_outer; 
-			y1 = ymax - radius_outer;
-			if ((x-x1)**2 + (y-y1)**2) < radius_outer**2 and ((x-x1)**2 + (y-y1)**2) >= (radius_outer-y_crust)**2 and y > (ymax - depth_notch): 
-				angle=numpy.arctan((y-y1)/(x-x1));
-				if angle > numpy.radians(90. - slab_dip):
-				   C[ind,2]=1
-
-
-		# OP tracers
-		if  C[ind,2] != 1:
-			if x > (x_gap + x_SP - radius_outer) and x < (x_gap + x_SP):
-				x1 = x_gap + x_SP - radius_outer; 
-				y1 = ymax - radius_outer;
-				if ((x-x1)**2 + (y-y1)**2) >= radius_outer**2 and y > (ymax - OPthick): 
-					C[ind,4]= 1
-			if  x >= (x_gap + x_SP) and x < (xmax - x_gap) and y > (ymax - OPthick): 
-					C[ind,4]= 1
+        # crust tracers
+        if x > (x_gap) and x <= (x_gap + x_SP - radius_outer) and y > (ymax - y_crust):
+            C[ind,2]=1
+        elif x > (x_gap + x_SP - radius_outer) and x < (x_gap + x_SP):
+            x1 = x_gap + x_SP - radius_outer; 
+            y1 = ymax - radius_outer;
+            if ((x-x1)**2 + (y-y1)**2) < radius_outer**2 and ((x-x1)**2 + (y-y1)**2) >= (radius_outer-y_crust)**2 and y > (ymax - depth_notch): 
+                angle=numpy.arctan((y-y1)/(x-x1));
+                if angle > numpy.radians(90. - slab_dip):
+                   C[ind,2]=1
 
 
+        # OP tracers
+        if  C[ind,2] != 1:
+            if x > (x_gap + x_SP - radius_outer) and x < (x_gap + x_SP):
+                x1 = x_gap + x_SP - radius_outer; 
+                y1 = ymax - radius_outer;
+                if ((x-x1)**2 + (y-y1)**2) >= radius_outer**2 and y > (ymax - OPthick): 
+                    C[ind,4]= 1
+            if  x >= (x_gap + x_SP) and x < (xmax - x_gap) and y > (ymax - OPthick): 
+                    C[ind,4]= 1
 
-		# weak plate edge tracers
-		if C[ind,2] != 1 and C[ind,4] != 1:
-			if x > (x_gap - 75.e3) and x < (x_gap) and y > (ymax - 75.e3):
-				C[ind,3]=1
-			if x > (xmax - x_gap) and x < (xmax - x_gap + 75.e3) and y > (ymax - 75.e3):
-				C[ind,3]=1
 
 
-		ind=ind+1;
+        # weak plate edge tracers
+        if C[ind,2] != 1 and C[ind,4] != 1:
+            if x > (x_gap - 75.e3) and x < (x_gap) and y > (ymax - 75.e3):
+                C[ind,3]=1
+            if x > (xmax - x_gap) and x < (xmax - x_gap + 75.e3) and y > (ymax - 75.e3):
+                C[ind,3]=1
+
+
+        ind=ind+1;
 
 # write to file
 f= open("text_files/compnotch_thick10km_80km50kmContOP_NoNotch_WeakPlateEdges_90MaThinSlabCore2.txt","w+")
 f.write("# POINTS: %s %s\n" % (str(xnum+1),str(ynum+1)))
 f.write("# Columns: x y composition1 composition2 composition3 composition4\n")
 for k in range(0,ind):
-	f.write("%.6f %.6f %.2f %.2f %.2f %.2f\n" % (C[k,0],C[k,1],C[k,2],C[k,3],C[k,4],C[k,5]))
+    f.write("%.6f %.6f %.2f %.2f %.2f %.2f\n" % (C[k,0],C[k,1],C[k,2],C[k,3],C[k,4],C[k,5]))
 f.close() 
 
