@@ -1,4 +1,4 @@
-## Model overiew:
+## Model overview:
 
 **Reference model** (Figures 1-3)<br />
 SlabT10_v2.5e20GeomC_Lay15_DiffDisl1e-15Lby0.1_10kmCrust2e20_SP90MaOP10Ma_80kmCrust_HighRes.prm
